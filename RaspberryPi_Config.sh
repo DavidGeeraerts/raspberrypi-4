@@ -45,3 +45,10 @@ firewall-cmd --add-service=https --permanent
 firewall-cmd --add-service=cockpit --permanent
 
 firewall-cmd --runtime-to-permanent
+
+# Control Display Power Settings
+apt-get install x11-xserver-utils
+
+xset s off      # Screensaver
+xset -dpms      # Disable DPMS (Energery Star)
+xset s noblank  # disable blank out video device 
