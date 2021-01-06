@@ -2,7 +2,14 @@
 
 # Configuration File
 # Edition
-SCRIPT_EDITION=1.1
+SCRIPT_EDITION=1.2
+
+# Update
+apt update -y
+
+# Upgrade
+apt upgrade -y
+
 
 # Remote System Configuration
 # Setup ssh
