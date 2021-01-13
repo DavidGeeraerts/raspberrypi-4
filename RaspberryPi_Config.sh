@@ -2,13 +2,16 @@
 
 # Configuration File
 # Edition
-SCRIPT_EDITION=1.2
+SCRIPT_EDITION=1.3
 
 # Update
 apt update -y
 
 # Upgrade
 apt upgrade -y
+
+# Install Aptitude package manager
+sudo apt install aptitude -y
 
 
 # Remote System Configuration
@@ -17,23 +20,23 @@ systemctl enable ssh
 systemctl start ssh
 
 # Cockpit
-apt-get install cockpit -y
-apt-get install cockpit-pcp -y
+apt install cockpit -y
+apt install cockpit-pcp -y
     # Should be enabled by default with install
     #systemctl enable cockpit
     #systemctl start cockpit
 
 # nginx web server
-apt-get install nginx -y
+apt install nginx -y
 
 
 # Basic Applications
     # firefox
-apt-get install iceweasel -y
+apt install iceweasel -y
 # Terminal
-apt-get install fish -y
+apt install fish -y
 # Terminal multi
-apt-get install tmux -y
+apt install tmux -y
 
 
 
@@ -45,7 +48,7 @@ apt-get install tmux -y
 # apt-get install firewall-config -y
 
 # Install firewall d
-apt-get install firewalld -y
+apt install firewalld -y
 firewall-cmd --add-service=ssh --permanent
 firewall-cmd --add-service=http --permanent
 firewall-cmd --add-service=https --permanent
@@ -54,7 +57,7 @@ firewall-cmd --add-service=cockpit --permanent
 firewall-cmd --runtime-to-permanent
 
 # Control Display Power Settings
-apt-get install x11-xserver-utils
+apt install x11-xserver-utils
 
 xset s off      # Screensaver
 xset -dpms      # Disable DPMS (Energery Star)
