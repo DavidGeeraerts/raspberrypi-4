@@ -2,7 +2,7 @@
 
 # Configuration File
 # Edition
-SCRIPT_EDITION=1.3
+SCRIPT_EDITION=1.4
 
 # Update
 apt update -y
@@ -13,6 +13,14 @@ apt upgrade -y
 # Install Aptitude package manager
 sudo apt install aptitude -y
 
+# Install Flatpak
+#   https://www.flatpak.org
+sudo apt install flatpak
+# Plugin to allow GUI app's to run
+sudo apt install gnome-software-plugin-flatpak
+# Enable Flathub repository
+#   https://flathub.org
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # Remote System Configuration
 # Setup ssh
