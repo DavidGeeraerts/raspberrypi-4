@@ -2,13 +2,13 @@
 
 # Configuration File
 # Edition
-SCRIPT_EDITION=1.4
+SCRIPT_EDITION=1.5
 
 # Update
 apt update -y
 
 # Upgrade
-apt upgrade -y
+apt full-upgrade -y
 
 # Install Aptitude package manager
 sudo apt install aptitude -y
@@ -33,10 +33,16 @@ apt install cockpit-pcp -y
     # Should be enabled by default with install
     #systemctl enable cockpit
     #systemctl start cockpit
-
+## Simple test: http://localhost:9090
 # nginx web server
 apt install nginx -y
 
+##	Applications
+
+# QBittorrent
+apt install qbittorrent -y
+# Bpytop
+apt install bpytop -y
 
 # Basic Applications
     # firefox
@@ -45,9 +51,6 @@ apt install iceweasel -y
 apt install fish -y
 # Terminal multi
 apt install tmux -y
-
-
-
 
 
 # firewall configure cockpit
