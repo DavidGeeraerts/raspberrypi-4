@@ -2,7 +2,10 @@
 
 # Configuration File
 # Edition
-SCRIPT_EDITION=1.5
+SCRIPT_EDITION=1.6
+
+# It's all sudo from here
+sudo su
 
 # Update
 apt update -y
@@ -11,13 +14,13 @@ apt update -y
 apt full-upgrade -y
 
 # Install Aptitude package manager
-sudo apt install aptitude -y
+apt install aptitude -y
 
 # Install Flatpak
 #   https://www.flatpak.org
-sudo apt install flatpak
+apt install flatpak
 # Plugin to allow GUI app's to run
-sudo apt install gnome-software-plugin-flatpak
+apt install gnome-software-plugin-flatpak
 # Enable Flathub repository
 #   https://flathub.org
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
