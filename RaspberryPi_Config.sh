@@ -2,7 +2,7 @@
 
 # Configuration File
 # Edition
-SCRIPT_EDITION=1.7
+SCRIPT_EDITION=1.8
 
 # It's all sudo from here
 sudo su
@@ -24,6 +24,10 @@ apt install gnome-software-plugin-flatpak
 # Enable Flathub repository
 #   https://flathub.org
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# Celluloid Media Player
+flatpak install flathub io.github.celluloid_player.Celluloid
+
 
 # Remote System Configuration
 # Setup ssh
