@@ -2,7 +2,7 @@
 
 # Configuration File
 # Edition
-SCRIPT_EDITION=1.6
+SCRIPT_EDITION=1.7
 
 # It's all sudo from here
 sudo su
@@ -55,6 +55,11 @@ apt install fish -y
 # Terminal multi
 apt install tmux -y
 
+# Remmina --Windows Remote Desktop
+# https://remmina.org
+# gnome-keyring for saving encrypted passwords
+apt install gnome-keyring
+apt install remmina
 
 # firewall configure cockpit
 # GUI tool for firewalld
